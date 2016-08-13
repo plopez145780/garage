@@ -5,4 +5,7 @@ package fr.plopez.garage;
  */
 public class Lagouna extends Vehicule {
 
+    public Lagouna(){
+        super(9999.99d,"Lagouna",Marque.RENO);
+    }
 }

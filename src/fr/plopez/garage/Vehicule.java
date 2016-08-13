@@ -12,6 +12,14 @@ public abstract class Vehicule {
     private List<Option> options = new ArrayList<>();
     private Marque nomMarque;
 
+
+    public Vehicule(Double prix, String nom, Marque marque){
+        this.prix = prix;
+        this.nom = nom;
+        this.nomMarque = marque;
+    }
+
+
     public Double getPrix() {
         return prix;
     }
