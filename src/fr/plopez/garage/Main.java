@@ -1,12 +1,14 @@
+package fr.plopez.garage;
+
 /**
- * Created by pierr on 13/08/2016.
+ * Created by pierre on 13/08/2016.
  */
 public class Main {
     public static void main(String[] args) {
         Garage garage = new Garage();
         System.out.println(garage);
 
-        Vehicule lag1 = new Lagouna();
+        /*Vehicule lag1 = new Lagouna();
         lag1.setMoteur(new MoteurEssence("150 Chevaux", 10256d));
         lag1.addOption(new GPS());
         lag1.addOption(new SiegeChauffant());
@@ -44,6 +46,6 @@ public class Main {
         d4_2.addOption(new Climatisation());
         d4_2.addOption(new GPS());
         d4_2.addOption(new VitreElectrique());
-        garage.addVoiture(d4_2);
+        garage.addVoiture(d4_2);*/
     }
 }
