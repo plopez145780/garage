@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by pierre on 13/08/2016.
  */
-public class Vehicule implements Option{
+public abstract class Vehicule implements Option{
     private Double prix;
     private String nom;
     private List<Option> options;
