@@ -1,5 +1,9 @@
 package fr.plopez.garage;
 
+import fr.plopez.option.GPS;
+import fr.plopez.option.SiegeChauffant;
+import fr.plopez.option.VitreElectrique;
+
 /**
  * Created by pierre on 13/08/2016.
  */

@@ -30,7 +30,7 @@ public class Garage {
         }catch (NullPointerException e){
             listeVoiture = "Aucune voiture sauvegardée !";
         }
-        
+
         return listeVoiture;
     }
 }
