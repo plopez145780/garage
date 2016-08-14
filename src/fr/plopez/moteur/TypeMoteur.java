@@ -1,7 +1,8 @@
 package fr.plopez.moteur;
 
 /**
- * Created by pierr on 13/08/2016.
+ * Enumeration TypeMoteur contenant les motorisations de Vehicule
+ * @author pierre
  */
 public enum TypeMoteur {
     DIESEL,

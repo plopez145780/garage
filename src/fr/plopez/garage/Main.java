@@ -3,9 +3,6 @@ package fr.plopez.garage;
 import fr.plopez.option.*;
 import fr.plopez.moteur.*;
 
-/**
- * Created by pierre on 13/08/2016.
- */
 public class Main {
     public static void main(String[] args) {
         Garage garage = new Garage();

@@ -5,11 +5,18 @@ import java.util.List;
 import java.util.ListIterator;
 
 /**
- * Created by pierre on 13/08/2016.
+ * classe déclarant un garage contenant des Vehicule
+ * @author pierre
  */
 public class Garage {
+    /**
+     * Liste des objet Vehicule dans le garage
+     */
     private List<Vehicule> voitures = new ArrayList<>();
 
+    /**
+     * Constructeur
+     */
     public Garage(){
         //TODO lire le fichier et enregistré le contenu, si pas de voiture message "Aucune voiture sauvegardée !"
         try{
@@ -21,12 +28,18 @@ public class Garage {
     }
 
 
-
-
+    /**
+     * Permet d'ajouter un Vehicule a la liste des voitures
+     * @param voit un objet Vehicule
+     */
     public void addVoiture(Vehicule voit){
         voitures.add(voit);
     }
 
+    /**
+     * String permettant d'affiché le contenu du garage
+     * @return texte affichant toute la liste des vehicules contenu dans le garage
+     */
     public String toString(){
         String  listeVoiture =  "*************************\n" +
                                 "* Garage OpenClassRooms *\n" +
