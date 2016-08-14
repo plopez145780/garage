@@ -1,10 +1,12 @@
 package fr.plopez.option;
 
+import java.io.Serializable;
+
 /**
  * Classe permettant d'instancier des Option de type Climatisation, implementant Option
  * @author pierre
  */
-public class Climatisation implements Option {
+public class Climatisation implements Option, Serializable {
     /**
      * Permet de retourner le prix de l'option climatisation
      * @return prix de l'option climatisation

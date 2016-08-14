@@ -1,10 +1,12 @@
 package fr.plopez.option;
 
+import java.io.Serializable;
+
 /**
  * Classe permettant d'instancier des Option de type VitreElectrique, implementant Option
  * @author pierre
  */
-public class VitreElectrique implements Option{
+public class VitreElectrique implements Option, Serializable {
     /**
      * Permet de retourner le prix de l'option Vitre electrique
      * @return prix de l'option Vitre electrique

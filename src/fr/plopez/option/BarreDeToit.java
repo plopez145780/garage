@@ -1,10 +1,12 @@
 package fr.plopez.option;
 
+import java.io.Serializable;
+
 /**
  * Classe permettant d'instancier des Option de type BarreDeToit, implementant Option
  * @author pierre
  */
-public class BarreDeToit implements Option {
+public class BarreDeToit implements Option, Serializable {
     /**
      * Permet de retourner le prix de l'option barre de toit
      * @return prix de l'option barre de toit

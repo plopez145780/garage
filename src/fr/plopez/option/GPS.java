@@ -1,10 +1,12 @@
 package fr.plopez.option;
 
+import java.io.Serializable;
+
 /**
  * Classe permettant d'instancier des Option de type GPS, implementant Option
  * @author pierre
  */
-public class GPS implements Option {
+public class GPS implements Option, Serializable {
     /**
      * Permet de retourner le prix de l'option GPS
      * @return prix de l'option GPS

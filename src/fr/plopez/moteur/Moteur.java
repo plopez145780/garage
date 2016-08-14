@@ -1,10 +1,12 @@
 package fr.plopez.moteur;
 
+import java.io.Serializable;
+
 /**
  * Class abstraite Moteur permet d'avoir des obet moteur a ajouté au vehicule
  * @author pierre
  */
-public abstract class Moteur {
+public abstract class Moteur implements Serializable {
     /**
      * Variable d'instance contenant le type venant de l'enumeration
      */

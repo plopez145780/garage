@@ -3,6 +3,7 @@ package fr.plopez.garage;
 import fr.plopez.option.Option;
 import fr.plopez.moteur.Moteur;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
  * Classe abstraite permettant de creer des voitures
  * @author pierre
  */
-public abstract class Vehicule {
+public abstract class Vehicule implements Serializable {
     /**
      * prix du vehicule
      */

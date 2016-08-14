@@ -1,6 +1,8 @@
 package fr.plopez.garage;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -8,7 +10,7 @@ import java.util.ListIterator;
  * classe déclarant un garage contenant des Vehicule
  * @author pierre
  */
-public class Garage {
+public class Garage implements Serializable{
     /**
      * Liste des objet Vehicule dans le garage
      */
@@ -18,22 +20,40 @@ public class Garage {
      * Constructeur
      */
     public Garage(){
-        //TODO lire le fichier et enregistré le contenu, si pas de voiture message "Aucune voiture sauvegardée !"
-        try{
-
+        try(
+                FileInputStream fis = new FileInputStream("garage.txt");
+                ObjectInputStream ois = new ObjectInputStream(fis)
+        ) {
+            voitures = (List<Vehicule>)ois.readObject();
+        }catch(IOException e){
+            System.out.println("Aucune voiture sauvegardée !");
         }catch(NullPointerException e){
-            //TODO doit afficher "Aucune voiture sauvegardée !"
-            e.getMessage();
+            e.printStackTrace();
+        } catch (ClassNotFoundException e){
+            e.printStackTrace();
         }
     }
 
 
     /**
-     * Permet d'ajouter un Vehicule a la liste des voitures
+     * Permet d'ajouter un Vehicule a la liste des voitures et d'enregistré la liste de voiture dans le fichier
      * @param voit un objet Vehicule
      */
     public void addVoiture(Vehicule voit){
         voitures.add(voit);
+        try(
+                FileOutputStream fos = new FileOutputStream("garage.txt");
+                BufferedOutputStream bos = new BufferedOutputStream(fos);
+                ObjectOutputStream oos = new ObjectOutputStream(bos)
+        ){
+            oos.writeObject(voitures);
+            oos.close();
+        }
+        catch (NullPointerException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     /**

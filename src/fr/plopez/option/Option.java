@@ -1,5 +1,7 @@
 package fr.plopez.option;
 
+import java.io.Serializable;
+
 /**
  * Interface Option, supertype pour les options de Vehicule
  * @author pierre
