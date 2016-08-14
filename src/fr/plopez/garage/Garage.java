@@ -10,27 +10,31 @@ import java.util.ListIterator;
 public class Garage {
     private List<Vehicule> voitures = new ArrayList<>();
 
+    public Garage(){
+        //TODO lire le fichier et enregistré le contenu, si pas de voiture message "Aucune voiture sauvegardée !"
+        try{
+
+        }catch(NullPointerException e){
+            //TODO doit afficher "Aucune voiture sauvegardée !"
+            e.getMessage();
+        }
+    }
+
+
+
+
     public void addVoiture(Vehicule voit){
         voitures.add(voit);
-        System.out.println("Ajout voiture");
-        System.out.println(this.toString());
     }
 
     public String toString(){
-        String listeVoiture = "";
-        try {
-            if (voitures.isEmpty()){
-                listeVoiture = "Aucune voiture sauvegardée !";
-            }
-
-            ListIterator iteratorVoitures = voitures.listIterator();
-            while (iteratorVoitures.hasNext()){
-                listeVoiture += iteratorVoitures.next();
-            }
-        }catch (NullPointerException e){
-            listeVoiture = "Aucune voiture sauvegardée !";
+        String  listeVoiture =  "*************************\n" +
+                                "* Garage OpenClassRooms *\n" +
+                                "*************************\n";
+        ListIterator iteratorVoitures = voitures.listIterator();
+        while (iteratorVoitures.hasNext()){
+            listeVoiture += iteratorVoitures.next();
         }
-
         return listeVoiture;
     }
 }

@@ -7,4 +7,7 @@ public class VitreElectrique implements Option{
     public Double getPrix(){
         return 200.50;
     }
+    public String toString(){
+        return "Vitre électrique (" + getPrix() + "€)";
+    }
 }

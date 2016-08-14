@@ -7,4 +7,7 @@ public class GPS implements Option {
     public Double getPrix(){
         return 150.20;
     }
+    public String toString(){
+        return "GPS (" + getPrix() + "€)";
+    }
 }

@@ -1,8 +1,7 @@
 package fr.plopez.garage;
 
-import fr.plopez.option.GPS;
-import fr.plopez.option.SiegeChauffant;
-import fr.plopez.option.VitreElectrique;
+import fr.plopez.option.*;
+import fr.plopez.moteur.*;
 
 /**
  * Created by pierre on 13/08/2016.
@@ -13,13 +12,13 @@ public class Main {
         System.out.println(garage);
 
         Vehicule lag1 = new Lagouna();
-        /*lag1.setMoteur(new MoteurEssence("150 Chevaux", 10256d));*/
+        lag1.setMoteur(new MoteurEssence("150 Chevaux", 10256d));
         lag1.addOption(new GPS());
         lag1.addOption(new SiegeChauffant());
         lag1.addOption(new VitreElectrique());
         garage.addVoiture(lag1);
 
-        /*Vehicule A300B_2 = new A300B();
+        Vehicule A300B_2 = new A300B();
         A300B_2.setMoteur(new MoteurElectrique("1500 W", 1234d));
         A300B_2.addOption(new Climatisation());
         A300B_2.addOption(new BarreDeToit());
@@ -50,6 +49,9 @@ public class Main {
         d4_2.addOption(new Climatisation());
         d4_2.addOption(new GPS());
         d4_2.addOption(new VitreElectrique());
-        garage.addVoiture(d4_2);*/
+        garage.addVoiture(d4_2);
+
+        //TODO a supprimer apres que l'enregistrement fonctionnera
+        System.out.println(garage);
     }
 }

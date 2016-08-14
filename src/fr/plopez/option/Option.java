@@ -5,4 +5,5 @@ package fr.plopez.option;
  */
 public interface Option {
     Double getPrix();
+    String toString();
 }

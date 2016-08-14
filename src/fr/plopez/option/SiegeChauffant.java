@@ -7,4 +7,7 @@ public class SiegeChauffant implements Option {
     public Double getPrix(){
         return 280.00;
     }
+    public String toString(){
+        return "Siège chauffant (" + getPrix() + "€)";
+    }
 }

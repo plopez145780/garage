@@ -7,4 +7,7 @@ public class BarreDeToit implements Option {
     public Double getPrix(){
         return 105.10;
     }
+    public String toString(){
+        return "Barre de toit (" + getPrix() + "€)";
+    }
 }
