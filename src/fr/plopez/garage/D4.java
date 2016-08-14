@@ -5,6 +5,6 @@ package fr.plopez.garage;
  */
 public class D4 extends Vehicule {
     public D4(){
-        super(20107.00d,"D4",Marque.TROEN);
+        super("D4",Marque.TROEN);
     }
 }
